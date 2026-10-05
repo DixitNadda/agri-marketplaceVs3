@@ -1,0 +1,33 @@
+body {
+    height: 100vh;
+    background: linear-gradient(140deg, Yellow, rgb(224, 129, 145), orange);
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.navItem {
+    margin-right: 30px;
+    margin-top: 30px;
+    color: rgb(144, 77, 6);
+    text-decoration: none;
+}
+
+#links {
+    display: flex;
+}
+#links a{
+    text-decoration: none;
+}
+
+#navline {
+    background: blueviolet;
+    height: 2px;
+    width: 100%;
+}
