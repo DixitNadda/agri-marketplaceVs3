@@ -19,7 +19,7 @@ const LoginSignup = () => {
             
             <div className="input">
               <FaPhone />
-              <input type="number" placeholder='Phone no.'value={phone}
+              <input type="number" placeholder='Phone no.' value={phone}
                 onChange={(e) => setPhone(e.target.value)}/><br />
             </div>
             <div className="input">
