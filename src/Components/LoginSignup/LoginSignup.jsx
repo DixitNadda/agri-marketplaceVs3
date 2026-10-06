@@ -5,6 +5,9 @@ import  './LoginSignup.css'
 const LoginSignup = () => {
 
   const [action, setAction] = useState("Sign Up");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [psd, setPassword] = useState("");
 
   return (
     <>
