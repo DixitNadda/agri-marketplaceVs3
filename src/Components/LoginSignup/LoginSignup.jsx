@@ -17,7 +17,7 @@ const LoginSignup = () => {
             {action === "Login"? <div></div>: <div className="input">
               <FaUser/>
               <input type="text" placeholder='Name' value={name}
-                onChange={(e) => setName(e.target.value)}/><<br />
+                onChange={(e) => setName(e.target.value)}/><br />
             </div>}
             
             <div className="input">
