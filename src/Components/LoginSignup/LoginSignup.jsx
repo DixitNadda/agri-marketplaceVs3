@@ -13,24 +13,35 @@ const LoginSignup = () => {
           <div className="inputs">
             {action === "Login"? <div></div>: <div className="input">
               <FaUser/>
-              <input type="text" placeholder='Name'/><br />
+              <input type="text" placeholder='Name' value={name}
+                onChange={(e) => setName(e.target.value)}/><<br />
             </div>}
             
             <div className="input">
               <FaPhone />
-              <input type="number" placeholder='Phone no.'/><br />
+              <input type="number" placeholder='Phone no.'value={phone}
+                onChange={(e) => setPhone(e.target.value)}/><br />
             </div>
             <div className="input">
               <FaLock />
-              <input type="password" placeholder='Password'/>
+              <input type="password" placeholder='Password' value={psd}
+                onChange={(e) => setPassword(e.target.value)}/><br />
             </div>
           </div>
           <div className="submit-container">
             <div className={action === "Login" ? "submit gray" : "submit"} onClick= {()=> {setAction("Sign Up");
-              alert("You signed in")
+              if (name?.trim() && phone?.trim() && psd?.trim()) {
+                alert(name +" signed in")
+              } else {
+                alert("Fill all the fields and give correct input")
+              }
             }}>Sign Up</div>
             <div className={action === "Sign Up" ? "submit gray" : "submit"} onClick= {()=> {setAction("Login");
-              alert("You logged in")
+              if (phone?.trim() && psd?.trim()) {
+                alert(phone +" Logged in")
+              } else {
+                alert("Fill all the fields and give correct input")
+              }
             }}>Login</div>
           </div>
         </div>
